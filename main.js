@@ -5,7 +5,7 @@ import e from "express";
 
 const app = express();
 
-const PORT = 6969;
+const PORT = 6969; 
 
 //Data understanding middleware
 
