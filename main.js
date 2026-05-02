@@ -1,10 +1,16 @@
 import express from "express";
 import movieRoutes from './routes/movies.route.js'
 import connectDB from "./lib/db.js";
+import e from "express";
 
 const app = express();
 
 const PORT = 6969;
+
+//Data understanding middleware
+
+app.use(express.json());//
+app.use(e.urlencoded({ extended: true})) //url xmm format
 
 
 //connect DB
