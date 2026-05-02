@@ -1,38 +1,25 @@
 import express from "express";
+import movieRoutes from './routes/movies.route.js'
+import connectDB from "./lib/db.js";
 
 const app = express();
 
-const PORT = 6969
-
-app.get('/',(req,res) =>{
-    res.json('Hello World I am FrontEnd developer')
-})
-
-//crud functionality of movies  
-
-//R- for reading movie 
-
-app.get('/movies',() =>{
-
-})
-
-//c-create movie
-app.post('/movies',() =>{
-
-})
-
-//u-update movies
-app.put('/movies/:id',() =>{
-
-})
+const PORT = 6969;
 
 
-//d-for delete movie
-app.delete('/movies/:id',() =>{
+//connect DB
 
-})
+connectDB();
 
+app.get("/", (req, res) => {
+  res.json("Hello World I am FrontEnd developer");
+});
 
-app.listen(PORT,() =>{
-    console.log(`The Port is running at http://localhost:${PORT}`)
-})
+//crud functionality of movies
+
+app.use("/movies", movieRoutes);
+
+app.listen(PORT, () => {
+  console.log(`The Port is running at http://localhost:${PORT}`);
+});
+    

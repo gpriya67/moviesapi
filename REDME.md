@@ -11,3 +11,12 @@ Provide a movie api for react app
 5.`git commit -m 'our msg'`
 6.`git push -u origin main`
 7.`git push`
+
+
+
+
+IP address (157.49.205.25)  -ip
+
+HgKnxtPdchSrfAHu - password
+
+priyagangadharan01_db_user - userName 
